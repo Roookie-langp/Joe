@@ -51,7 +51,7 @@
                                     <span class="text">温馨提示：</span>
                                 </div>
                                 <div class="content">
-                                    本文最后更新于<?php echo date('Y年m月d日', $this->modified); ?>，已超过<?php echo floor((time() - ($this->modified)) / 86400); ?>天没有更新，若内容或图片失效，请留言反馈。
+                                    本文最后更新于<?php echo date('Y年m月d日', $this->modified); ?>，已超过<?php echo floor((time() - ($this->modified)) / 86400); ?>天没有更新，如存在内容错误、图片加载失败、链接失效等问题，请留言反馈，博主将在第一时间进行修改。
                                 </div>
                             </div>
                         </div>
