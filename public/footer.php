@@ -1,18 +1,93 @@
 <footer class="joe_footer">
-    <div class="joe_container">
-        <div class="item">
-            <?php $this->options->JFooter_Left() ?>
-        </div>
-        <?php if ($this->options->JBirthDay) : ?>
-            <div class="item run">
-                <span>已运行 <strong class="joe_run__day">00</strong> 天 <strong class="joe_run__hour">00</strong> 时 <strong class="joe_run__minute">00</strong> 分 <strong class="joe_run__second">00</strong> 秒</span>
-            </div>
-        <?php endif; ?>
-        <div class="item">
-            <?php $this->options->JFooter_Right() ?>
-        </div>
-    </div>
+
+
+<!--以下至footer部分为自行编写-->
+<div class="joe_container" style="display:flex; flex-wrap:wrap; justify-content:center;">
+	<!-- 第一行链接：网站信息 -->
+	<div class="website_info" style="display:flex; flex-wrap:wrap; justify-content:center; padding:5px;">
+		<!-- 备案信息 -->
+		<div class="beian" style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap;">
+			<div class="beian_icp" style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap; margin-right:20px">
+				<img src="https://image.wlplove.com/static/img/icon/footer/beian_icp_favicon.png" width=20px height=auto>
+				<a style="text-decoration:none;" href="http://beian.miit.gov.cn/" target="_blank">
+					&nbsp;陇ICP备2021000230号-2
+				</a>
+			</div>
+			<div class="beian_police" style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap; margin-right:20px">
+				<img src="https://image.wlplove.com/static/img/icon/footer/beian_police.png" width="20px" height=auto>
+				<a style="text-decoration:none;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=62010202003430" target="_blank">
+					&nbsp;甘公网安备62010202003430号
+				</a>
+			</div>
+		</div>
+		<!-- 又拍云 -->
+		<div class="upyun" style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap; margin-right:20px">
+			<span>本站由</span>
+			<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">
+				<img src="https://image.wlplove.com/static/img/icon/footer/upyun_logo.png" alt="哎呀，图片加载失败了" width="60px" height=auto>
+			</a>
+			<span>提供CDN服务</span>
+		</div>
+		<!-- 运行时间 -->
+		<div class="runtime" style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap;">
+			<?php if ($this->options->JBirthDay) : ?>			
+				<span>已运行 <strong class="joe_run__day">00</strong> 天 <strong class="joe_run__hour">00</strong> 时 <strong class="joe_run__minute">00</strong> 分 <strong class="joe_run__second">00</strong> 秒</span>
+			<?php endif; ?>
+		</div>
+	</div>
+
+	<!-- 第二行链接：版权信息 -->
+	<div class="copyright" style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; padding:10px; line-height: 19.3px;">
+		<!-- 文章版权 -->
+		<div class="power_copyright" style="margin-right:20px;">
+			<a style="text-decoration:none;" href="http://typecho.org/" target="_blank">Powered by Typecho</a>
+		</div>
+		<div class="theme_copyright" style="margin-right:20px;">
+			<a style="text-decoration:none;" href="https://78.al/" target="_blank">Theme by Joe</a>
+		</div>
+		<div class="content_copyright" style="margin-right:20px;">
+		    <p>Copyright&nbsp;&nbsp;2021-2022&copy;
+			<a style="text-decoration:none;" href="https://www.wlplove.com/start-page.html" target="_blank">知识分子没文化</a>
+			</p>
+		</div>
+		<!-- 页面加载耗时 -->
+		<div class="time">
+			<span>页面加载耗时:<?php _endCountTime();?></span>
+		</div>
+	</div>
+
+	<!-- 签章、图标 -->
+	<div class="joe_container" style="display:flex; flex-wrap:wrap; justify-content:center;">
+		<!-- 小图标 -->
+		<div style="display:flex; justify-content:center;">
+			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://www.wlplove.com/feed/">
+				<img src="https://image.wlplove.com/static/img/icon/footer/rss.png" width=auto height="19px" style="margin-left:20px;">
+			</a>
+			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://www.wlplove.com/sitemap.xml">
+				<img src="https://image.wlplove.com/static/img/icon/footer/sitemap.png" width=auto height="20px" style="margin-left:20px;">
+			</a>
+			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://status.wlplove.com">
+				<img src="https://image.wlplove.com/static/img/icon/footer/status.png" width=auto height="21px" style="margin-left:20px;">
+			</a>
+			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://byteman.wlplove.com">
+				<img src="https://image.wlplove.com/static/img/icon/footer/navigation.png" width=auto height="20px" style="margin-left:20px;">
+			</a>
+		</div>
+		
+		<!-- HTTPS安全认证签章 -->
+		<div style="padding:10px 20px">
+			<a href="https://myssl.com/seal/detail?domain=www.wlplove.com" target="_blank">
+				<img src="https://static.myssl.com/res/images/myssl-id1.png" alt="HTTPS安全认证" style="max-height:45px;">
+			</a>
+		</div>
+	</div>
+</div>
+    
 </footer>
+
+<!-- 鱼群跳跃效果 -->
+<script src="https://image.wlplove.com/static/cdn/fish.min.js"></script>
+<div id="j-fish-skip"></div>
 
 <div class="joe_action">
     <div class="joe_action_item scroll">
