@@ -43,7 +43,11 @@
                                 <?php endwhile; ?>
                             </ul>
                         <?php else : ?>
-                            <div class="joe_detail__leaving-none">暂无留言，期待第一个脚印。</div>
+                            <div class="joe_detail__leaving-none">
+                                <p>这里是博主的留言板，当您来访时，可以在下方评论区留言给我。</p><br>
+                                <p>文章如有内容纰漏、图片加载失败、链接失效的地方, 也可留言告知我。</p><br> 
+                                <p>您留下的qq邮箱可用来展示您的头像，如果还能留下博客地址的话便更好不过了。</p>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
