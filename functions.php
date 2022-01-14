@@ -1,4 +1,5 @@
 <?php
+require_once 'times/Ajax.php';
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 /* Joe核心文件 */
