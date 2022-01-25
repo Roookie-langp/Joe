@@ -1,6 +1,6 @@
 <?php
 /**
- * 碎碎念
+ * 超级时光鸡
  * @author 即刻学术 www.ijkxs.com
  * @package custom
  */
