@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.2.4/plugin/prism/prism.min.js"></script>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/joe.post.min.css'); ?>">
     <script src="<?php $this->options->themeUrl('assets/js/joe.post_page.min.js'); ?>"></script>
+    
+    <!-- 导入目录的css文件 -->
+	<link rel="stylesheet" href="https://image.wlplove.com/static/cdn/menutree.css">
 </head>
 
 <body>
@@ -36,6 +39,21 @@
             </ul>
         </div>
         <div class="joe_container">
+        
+			<!-- 文章目录代码 -->
+			<section class="joe_aside__item menutree">
+				<div class="joe_aside__item-title">
+					<svg t="1642997936013" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2169" width="128" height="128"><path d="M838.3 895.9H197.9c-53.9 0-97.7-43.8-97.7-97.7V236.7c0-53.9 43.8-97.7 97.7-97.7h640.3c53.9 0 97.7 43.8 97.7 97.7v561.4c0.1 53.9-43.7 97.8-97.6 97.8zM197.9 203.8c-18.1 0-32.9 14.8-32.9 32.9v561.4c0 18.1 14.8 32.9 32.9 32.9h640.3c18.1 0 32.9-14.8 32.9-32.9V236.7c0-18.1-14.8-32.9-32.9-32.9H197.9z" fill="#666666" p-id="2170"></path><path d="M695.1 455.2H341.2c-17.9 0-32.4-14.5-32.4-32.4s14.5-32.4 32.4-32.4h353.9c17.9 0 32.4 14.5 32.4 32.4s-14.5 32.4-32.4 32.4zM695.1 578.2H341.2c-17.9 0-32.4-14.5-32.4-32.4s14.5-32.4 32.4-32.4h353.9c17.9 0 32.4 14.5 32.4 32.4s-14.5 32.4-32.4 32.4zM695.1 701.2H341.2c-17.9 0-32.4-14.5-32.4-32.4s14.5-32.4 32.4-32.4h353.9c17.9 0 32.4 14.5 32.4 32.4s-14.5 32.4-32.4 32.4zM379.1 281.1c-17.9 0-32.4-14.5-32.4-32.4V115.4c0-17.9 14.5-32.4 32.4-32.4s32.4 14.5 32.4 32.4v133.2c0 17.9-14.5 32.5-32.4 32.5zM657.1 281.1c-17.9 0-32.4-14.5-32.4-32.4V115.4c0-17.9 14.5-32.4 32.4-32.4s32.4 14.5 32.4 32.4v133.2c0 17.9-14.5 32.5-32.4 32.5z" fill="#666666" p-id="2171"></path></svg>
+					<span class="text">目录</span>
+					<span class="line"></span>
+				</div>
+				<div class="joe_aside__item-contain">
+					<?php $this->treeMenu(); ?>
+				</div>
+			</section>
+			<!-- 导入的js文件，必须在这里导入，否则不生效 -->
+			<script src="https://image.wlplove.com/static/cdn/menutree.js"></script>
+        
             <div class="joe_main joe_post">
                 <div class="joe_detail" data-cid="<?php echo $this->cid ?>">
                     <?php $this->need('public/batten.php'); ?>
