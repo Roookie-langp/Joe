@@ -1,6 +1,6 @@
 ## Joe
 
-本仓库 Fork 自 https://github.com/HaoOuBa/Joe，在 7.3.6 版本的基础上修改了一些内容：
+本仓库 Fork 自 https://github.com/HaoOuBa/Joe， 在 7.3.6 版本的基础上修改了一些内容：
 
 * 修改页脚形式
 * 页脚添加鱼群动画（以前的主题是有的，但是5.0版本以后作者去掉了这个功能）
