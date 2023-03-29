@@ -161,3 +161,10 @@ function themeFields($layout)
     );
     $layout->addItem($video);
 }
+
+// 获取总访问量数据，
+function theAllViews(){
+	$db = Typecho_Db::get();
+	$row = $db->fetchAll('SELECT SUM(VIEWS) FROM `blog_contents`');
+	echo number_format($row[0]['SUM(VIEWS)'],0,".","");
+}

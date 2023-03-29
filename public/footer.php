@@ -32,6 +32,7 @@
 		<div class="runtime" style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap;">
 			<?php if ($this->options->JBirthDay) : ?>			
 				<span>已运行 <strong class="joe_run__day">00</strong> 天 <strong class="joe_run__hour">00</strong> 时 <strong class="joe_run__minute">00</strong> 分 <strong class="joe_run__second">00</strong> 秒</span>
+				<span style="padding-left:20px;">总访问量<span style="color: var(--theme);padding:0 5px;"><?php echo theAllViews();?></span>次</span>
 			<?php endif; ?>
 		</div>
 	</div>
@@ -52,7 +53,7 @@
 		</div>
 		<!-- 页面加载耗时 -->
 		<div class="time">
-			<span>页面加载耗时:<?php _endCountTime();?></span>
+			<span>页面加载耗时<span style="color: var(--theme); padding-left: 3px;"><?php _endCountTime();?></span></span>
 		</div>
 	</div>
 
@@ -60,16 +61,16 @@
 	<div class="joe_container" style="display:flex; flex-wrap:wrap; justify-content:center;">
 		<!-- 小图标 -->
 		<div style="display:flex; justify-content:center;">
-			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://www.wlplove.com/feed/">
+			<a style="text-decoration:none; align-items:center;" target="_blank" title="RSS订阅" href="https://www.wlplove.com/feed/">
 				<img src="https://image.wlplove.com/static/img/icon/footer/rss.png" width=auto height="19px" style="margin-left:20px;">
 			</a>
-			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://www.wlplove.com/sitemap.xml">
+			<a style="text-decoration:none; align-items:center;" target="_blank" title="站点地图" href="https://www.wlplove.com/sitemap.xml">
 				<img src="https://image.wlplove.com/static/img/icon/footer/sitemap.png" width=auto height="20px" style="margin-left:20px;">
 			</a>
-			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://status.wlplove.com">
+			<a style="text-decoration:none; align-items:center;" target="_blank"  title="服务器状态监控" href="https://status.wlplove.com">
 				<img src="https://image.wlplove.com/static/img/icon/footer/status.png" width=auto height="21px" style="margin-left:20px;">
 			</a>
-			<a style="text-decoration:none; align-items:center;" target="_blank" href="https://byteman.wlplove.com">
+			<a style="text-decoration:none; align-items:center;" target="_blank" title="开发文档导航" href="https://byteman.wlplove.com">
 				<img src="https://image.wlplove.com/static/img/icon/footer/navigation.png" width=auto height="20px" style="margin-left:20px;">
 			</a>
 		</div>
