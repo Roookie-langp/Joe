@@ -229,7 +229,9 @@ function _getThumbnails($item)
 			}
 		} else {
 			for ($i = 0; $i < 3; $i++) {
-				$result[] = 'https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/assets/thumb/' . rand(1, 42) . '.jpg';
+//			    缩略图
+//				$result[] = 'https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/assets/thumb/' . rand(1, 42) . '.jpg';
+				$result[] = 'https://image.wlplove.com/static/img/thumb/' . rand(1, 42) . '.jpg';
 			}
 		}
 	}

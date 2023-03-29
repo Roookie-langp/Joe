@@ -1,7 +1,7 @@
 <?php
 /**
- * 超级时光鸡
- * @author 即刻学术 www.ijkxs.com
+ * 碎碎念
+ * @author 即刻学术 www.ijkxs.com 知识分子没文化修改
  * @package custom
  */
 
@@ -15,7 +15,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/gogobody/PicsumPlaceholder/img/536_354_webp/79.webp">
+    <meta itemprop="image" content="https://image.wlplove.com/static/img/other/79.webp">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=6.0, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
 
@@ -24,20 +24,23 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <!-- Typecho自有函数 -->
     <meta name="description" content="碎碎念">
     <meta name="generator" content="Typecho 1.2/18.1.29">
-    <!-- 通过自有函数输出HTML头部信息 -->
+    <!-- 通过自有函数输出HTML头部信息 
     <?php $this->header(); ?>
-
+    -->
     <!-- 网站标题 -->
     <title>碎碎念</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap-grid.min.css"
+		<link rel="stylesheet" href="<?php $this->options->themeUrl('assets/static/bootstrap-grid.min.css'); ?>"
           media="all">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css" media="all">
-
-<!--    <link rel="stylesheet" href="http://localhost/usr/themes/Typecho-Joe-Theme/assets/css/joe.min.css" media="all">-->
-<!--    <link rel="stylesheet" href="http://localhost/usr/themes/Typecho-Joe-Theme/assets/css/joe.responsive.min.css" media="all">-->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gogobody/Modify_Joe_Theme/assets/css/OwO.min.css"
+        <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/static/animate.min.css'); ?>" media="all">
+        <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/static/OwO.min.css'); ?>"
           media="all" onload="this.media='all'; this.onload=null;">
+     <!--
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap-grid.min.css"
+          media="all">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css" media="all">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gogobody/Modify_Joe_Theme/assets/css/OwO.min.css"
+          media="all" onload="this.media='all'; this.onload=null;">
+    -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('times/assets/dycomment.min.css'); ?>"
           media="all" onload="this.media='all'; this.onload=null;">
 
@@ -51,13 +54,16 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         <section class="j-adaption">
             <?php $this->need('times/dycomment.php'); ?>
         </section>
-
     </section>
     <!-- 页面页脚 -->
     <?php $this->need('public/footer.php'); ?>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typecho_joe_theme@4.4.5/assets/js/OwO.min.js"></script>
+	<script src="<?php $this->options->themeUrl('assets/static/jquery.min.js'); ?>"></script>
+	<script src="<?php $this->options->themeUrl('assets/static/OwO.min.js'); ?>"></script>
+<!--
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typecho_joe_theme@4.4.5/assets/js/OwO.min.js"></script>
+-->
 
 <script>
     function changeURLArg(url,arg,arg_val){
@@ -105,36 +111,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                 if ($(this).attr('data-disabled')) return;
                 $(this).attr('data-disabled', true);
                 btn.text("发表中...")
-
-                // $.ajax({
-                //     url: $(this).attr('action'),
-                //     type: 'post',
-                //     data: $(this).serializeArray(),
-                //     success: res => {
-                //         let arr = [],
-                //             str = '';
-                //         arr = $(res).contents();
-                //         Array.from(arr).forEach(_ => {
-                //             if (_.parentNode.className === 'container') str = _;
-                //         });
-                //         if (!/TypechoJoeTheme/.test(res)) {
-                //
-                //             alert(str.textContent || '');
-                //             $('#j-dynamic-form-text').val('')
-                //             $(this).removeAttr('data-disabled');
-                //         } else {
-                //             let url = location.href;
-                //             url = changeURLArg(url, 'jscroll', 'comments');
-                //
-                //             alert('发表成功！');
-                //
-                //         }
-                //         btn.text("立即发表")
-                //     },
-                //     error:res =>{
-                //         btn.text("立即发表")
-                //     }
-                // });
             });
         }
     }

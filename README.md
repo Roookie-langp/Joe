@@ -1,9 +1,11 @@
 ## Joe
 
-本仓库 Fork 自[HaoOuBa/Joe: A Theme of Typecho (github.com)](https://github.com/HaoOuBa/Joe)，在 7.3.6 版本的基础上修改了一些内容：
+### 说明
+
+本仓库 Fork 自 Joe 仓库： [HaoOuBa/Joe: A Theme of Typecho (github.com)](https://github.com/HaoOuBa/Joe)，在 Joe 7.3.6 版本的基础上修改了如下内容：
 
 * 修改页脚形式
-* 页脚添加鱼群动画（以前的主题是有的，但是5.0版本以后作者去掉了这个功能）
+* 页脚添加鱼群动画（6.0版本以前的joe主题是有的，但是5.0版本以后作者去掉了这个功能）
 * 修改留言区文字备注
 * 修改文章更新文字提示
 * 添加“碎碎念”页面模板
@@ -11,15 +13,47 @@
 TODO：
 
 - [x] 添加文章侧边栏目录功能
-- [ ] 更新静态文件的 cdn 链接，从 jsdelivr 链接变成本地链接
+- [x] 更新静态文件的 cdn 链接，从 jsdelivr 链接变成本地链接（目前只是部分实现）
 - [ ] 页脚添加站点总访问次数功能
+- [ ] 碎碎念页面的数据可以分页查询
+
+
+
+页面静态文件链接修改位置：
+
+* assets/js：
+  * joe.global.js：205行
+* core：
+  * factory.php：172——173行、187行——188行（调用函数为 `<?php Helper::options()->themeUrl('') ?>` ）
+  * function.php：232行（文章列表缩略图）
+* library：
+  * files.php：194行、1239行、1250行、1423行、1475行——1484行、1489行
+  * player.php：29——30行
+* public：
+  * include：23——39行（15个）
+* archives.php：6行
+* census.php：18行
+
+* friends.php：20——23行
+
+* functions.php：70处（可选择不改，影响不大）
+* index.php：16——18行
+* leaving.php：18行
+* page.php：9——12行（3处）
+* post.php：9——12行（3处）
 
 
 
 
 
 
-### 以下为主题作者的介绍
+
+
+
+
+
+
+### 以下为原项目的 Readme 内容
 
 > 一款基于Typecho博客的双栏极致优化主题
 - QQ交流群：457337579
